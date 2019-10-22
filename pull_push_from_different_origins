@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Recebendo parametros..."
+echo $1 #branch
+echo $2 #origin
+
+#Faz o pull do origin da hom específica
+git pull $2 $1
+
+read  -n 1 -p "Tem certeza que deseja enviar psara $2 (y/n)?:" Res
+
+case "$Res" in
+    y|Y|"")
+        #Faz o push do origin da hom específica
+        git push $2 $1
+    ;;
+    n|N)
+        echo "Nada foi feito..."
+        clear
+    ;;
+esac
