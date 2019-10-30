@@ -3,14 +3,14 @@ echo "Recebendo parametros..."
 echo $1 #branch
 echo $2 #origin
 
-#Faz o pull do origin da hom específica
+#Faz o pull do origin da branch específica
 git pull $2 $1
 
 read  -n 1 -p "Tem certeza que deseja enviar para $2 (y/n)?:" Res
 
 case "$Res" in
     y|Y|"")
-        #Faz o push do origin da hom específica
+        #Faz o push do origin da branch específica
         read  -n 1 -p "Digite o origin desejado:" origin
         git push $origin $1
     ;;
