@@ -13,7 +13,7 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install python3 python-pip wine docker docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak -y &&
+sudo apt install python3 python3-pip python-pip wine docker docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak -y &&
 
 ## Instalando pacotes Snap ##
 
