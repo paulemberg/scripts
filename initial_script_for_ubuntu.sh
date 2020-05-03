@@ -13,7 +13,7 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install python3 python3-pip python-pip wine docker docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak -y &&
+sudo apt install python3 python3-pip python-pip wine docker docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak zsh -y &&
 
 ## Instalando pacotes Snap ##
 
@@ -35,7 +35,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ##Install VSCode
 sudo flatpak install flathub com.obsproject.Studio -y &&
 ##Install Sublime Text
-sudo flatpak install flathub com.sublimetext.three -y &&
+# sudo flatpak install flathub com.sublimetext.three -y &&
+sudo umake ide sublime-text -y &&
 ##Install Brave
 sudo flatpak install flathub io.dbeaver.DBeaverCommunity -y &&
  
@@ -46,6 +47,8 @@ cd ~/Downloads/ &&
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && 
 sudo dpkg -i *.deb &&
 
+##Install oh-my-zsh
+ sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y &&
 ## Atualização do sistema ##
 
 sudo apt update && 
