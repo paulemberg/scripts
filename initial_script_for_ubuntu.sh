@@ -25,6 +25,7 @@ sudo snap install insomnia &&
 sudo snap install spotify &&
 sudo snap install wps-office-multilang && 
 sudo snap install ubuntu-make --classic &&
+sudo snap install rider --classic --edge &&
 
 ## Adicionando repositório Flathub ##
 
