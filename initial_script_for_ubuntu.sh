@@ -13,16 +13,17 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install python3 python3-pip python-pip wine docker.io docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak zsh -y &&
+sudo apt install python3 docker.io docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak zsh terminator -y &&
+
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  -y &&
+
 
 ## Instalando pacotes Snap ##
 
 sudo snap install slack --classic &&  
-sudo snap install skype --classic &&  
 sudo snap install code --classic &&  
 sudo snap install --edge node --classic && 
 sudo snap install insomnia &&  
-sudo snap install spotify &&
 sudo snap install wps-office-multilang && 
 sudo snap install ubuntu-make --classic &&
 sudo snap install rider --classic --edge &&
@@ -33,16 +34,16 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 ## Instalando Apps do Flathub ##
 
-##Install VSCode
-sudo flatpak install flathub com.obsproject.Studio -y &&
-##Install Sublime Text
-# sudo flatpak install flathub com.sublimetext.three -y &&
-sudo umake ide sublime-text -y &&
+## Install dbeaver ce
+sudo flatpak install flathub io.dbeaver.DBeaverCommunity &&
+
+
 ##Install Brave
 sudo flatpak install flathub io.dbeaver.DBeaverCommunity -y &&
  
 
 ## Softwares que precisam de download externo ##
+
 ##Install Chrome
 cd ~/Downloads/ && 
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && 
@@ -50,8 +51,16 @@ sudo dpkg -i *.deb &&
 
 ##Install oh-my-zsh
  sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y &&
-## Atualização do sistema ##
 
+##Install Sublime Text
+cd ~/Downloads/ && 
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null &&
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
+sudo apt install sublime-text -y &&
+
+
+
+## Atualização do sistema ##
 sudo apt update && 
 sudo apt dist-upgrade -y && 
 sudo apt autoclean -y && 
