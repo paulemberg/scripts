@@ -13,10 +13,13 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install python3 docker.io docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak zsh terminator -y &&
+sudo apt install python3 docker.io docker-compose git build-essential libssl-dev flatpak gnome-software-plugin-flatpak zsh terminator nodejs -y &&
 
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  -y &&
 
+sudo sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash)"  -y &&
+
+npm install -g npm@latest &&
 
 ## Instalando pacotes Snap ##
 
@@ -65,6 +68,7 @@ sudo apt update &&
 sudo apt dist-upgrade -y && 
 sudo apt autoclean -y && 
 sudo apt autoremove -y &&
+
 
 #Fim do Script ##
 
