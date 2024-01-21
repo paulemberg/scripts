@@ -14,12 +14,10 @@ sudo dnf install snapd -y &&
 ##Criando a symlink para rodar os snaps classics abaixo 'https://snapcraft.io/docs/installing-snap-on-fedora'
 sudo ln -s /var/lib/snapd/snap /snap &&
 sudo snap install slack --classic &&
-sudo snap install skype --classic &&
 sudo snap install code --classic &&
 sudo snap install --edge node --classic &&
 sudo snap install insomnia &&
 sudo snap install spotify &&
-sudo snap install wps-office-multilang &&
 sudo snap install ubuntu-make --classic &&
 ## Adicionando repositório Flathub ##
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
