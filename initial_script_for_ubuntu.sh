@@ -64,6 +64,7 @@ sudo apt install sublime-text -y &&
 ## Add docker group and Add user on it
 sudo groupadd docker &&
 sudo usermod -aG docker $USER &&
+
 ## Atualização do sistema ##
 sudo apt update && 
 sudo apt dist-upgrade -y && 
