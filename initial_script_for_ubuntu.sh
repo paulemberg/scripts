@@ -27,7 +27,6 @@ sudo snap install slack --classic &&
 sudo snap install code --classic &&  
 sudo snap install --edge node --classic && 
 sudo snap install insomnia &&  
-sudo snap install wps-office-multilang && 
 sudo snap install ubuntu-make --classic &&
 sudo snap install rider --classic --edge &&
 
