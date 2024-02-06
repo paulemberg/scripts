@@ -61,7 +61,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt install sublime-text -y &&
 
 
-
+## Add docker group and Add user on it
+sudo groupadd docker &&
+sudo usermod -aG docker $USER &&
 ## Atualização do sistema ##
 sudo apt update && 
 sudo apt dist-upgrade -y && 
