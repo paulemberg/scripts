@@ -67,7 +67,6 @@ sudo usermod -aG docker $USER &&
 
 ## Atualização do sistema ##
 sudo apt update && 
-sudo apt dist-upgrade -y && 
 sudo apt autoclean -y && 
 sudo apt autoremove -y &&
 
